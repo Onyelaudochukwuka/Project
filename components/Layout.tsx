@@ -5,7 +5,7 @@ import { Footer, Navbar } from "./index";
 
 const Layout = ({ children }: PropsWithChildren<any>) => {
   return (
-      <>
+      <div className="bg-[#053F5C]">
           
           <Head>
               <title>Ero</title>
@@ -15,7 +15,7 @@ const Layout = ({ children }: PropsWithChildren<any>) => {
           {children}
           <Footer />
 
-      </>
+      </div>
   )
 }
 
