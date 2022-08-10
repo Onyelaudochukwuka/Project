@@ -5,7 +5,7 @@ import { Footer, Navbar } from "./index";
 
 const Layout = ({ children }: PropsWithChildren<any>) => {
   return (
-      <div className="bg-[#053F5C]">
+      <div className="bg-[#053F5C] w-screen overflow-x-hidden min-h-screen">
           
           <Head>
               <title>Ero</title>
