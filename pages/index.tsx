@@ -4,8 +4,8 @@ import Image from "next/image";
 
 const Home: NextPage = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
-      {/* <Head>
+    <div className="flex min-h-screen flex-col items-center justify-center py-2 w-full">
+      <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -78,7 +78,7 @@ const Home: NextPage = () => {
           Powered by{" "}
           <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
         </a>
-      </footer> */}
+      </footer>
     </div>
   );
 };
