@@ -10,6 +10,25 @@ const Arr: Pages[] = [
   {
     heading: "Automobile",
     value: ["Cars", "Bicycle", "Bus"]
+  },
+  {
+    heading: "Automobile",
+    value: ["Cars", "Bicycle", "Bus", "Cars", "Bicycle", "Bus", "Cars", "Bicycle", "Bus"]
+  }, {
+    heading: "Automobile",
+    value: ["Cars", "Bicycle", "Bus"]
+  },
+  {
+    heading: "Automobile",
+    value: ["Cars", "Bicycle", "Bus"]
+  },
+  {
+    heading: "Automobile",
+    value: ["Cars", "Bicycle", "Bus"]
+  },
+  {
+    heading: "Automobile",
+    value: ["Cars", "Bicycle", "Bus"]
   }
 ]
 const Home: NextPage = () => {
