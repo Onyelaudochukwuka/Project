@@ -30,7 +30,7 @@ const Navbar: FC = () => {
 
   return (
     <>
-      <div className={`${!isMobile ? `w-0` : `${isDesktop ?`w-56`: `w-24`}` } transition-all duration-300 ease-in overflow-x-hidden  h-full min-h-screen absolute left-0 top-0 bottom-0 z-10 flex bg-white`}>
+      <div className={`${!isMobile ? `w-0` : `${isDesktop ? `w-56` : `w-24`}`} transition-all duration-300 ease-in overflow-x-hidden  h-full min-h-screen absolute left-0 top-0 bottom-0 z-10 flex bg-white`}>
         <div className="h-full bg-[#429EBD] px-8 flex flex-col justify-center  w-full items-center gap-16 transition-all ease-in duration-1000"  >
           <Link href="/home">
             <div className={`cursor-pointer w-full ${ isDesktop ? `flex items-center gap-4` : `block`}`} onClick={() => setIsMobile (false)}>
