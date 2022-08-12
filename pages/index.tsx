@@ -1,34 +1,42 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import { Selectors } from "../components";
+import { Book, Dropdown, Adult, Car } from "../public/index";
 type Pages = {
   heading: string,
-  value: string[]
+  value: string[],
+  icon: any
 }
 const Arr: Pages[] = [
   {
-    heading: "Automobile",
-    value: ["Cars", "Bicycle", "Bus"]
+    heading: "Adult",
+    value: ["Escort", "Body rub", "Massage"],
+    icon: <Adult/>
+    
   },
   {
     heading: "Automobile",
-    value: ["Cars", "Bicycle", "Bus", "Cars", "Bicycle", "Bus", "Cars", "Bicycle", "Bus"]
+    value: ["Cars", "Bicycle", "Bus", "Vans", "Motorcycles", ],
+    icon:<Car/>
   }, {
-    heading: "Automobile",
-    value: ["Cars", "Bicycle", "Bus"]
+    heading: "Books",
+    value: ["Novels", "Biography", "Children books"],
+    icon:<Book/>
   },
   {
     heading: "Automobile",
-    value: ["Cars", "Bicycle", "Bus"]
+    value: ["Cars", "Bicycle", "Bus"],
+    icon:""
   },
   {
     heading: "Automobile",
-    value: ["Cars", "Bicycle", "Bus"]
+    value: ["Cars", "Bicycle", "Bus"],
+    icon:""
   },
   {
     heading: "Automobile",
-    value: ["Cars", "Bicycle", "Bus"]
+    value: ["Cars", "Bicycle", "Bus"],
+    icon:""
   }
 ]
 const Home: NextPage = () => {
