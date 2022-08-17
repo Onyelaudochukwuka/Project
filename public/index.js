@@ -7,5 +7,6 @@ import Book from './book.svg'
 import Car from './car.svg'
 import Adult from './adult.svg'
 import Dropdown from './dropdown.svg'
-
-export { icon, vercel, Home, Mega, Account, Book, Car, Adult, Dropdown };
+import * as Icons from "./icons";
+export default Icons;
+export { icon, vercel, Book, Car, Adult, Dropdown, Icons };
