@@ -3,6 +3,7 @@ import Head from "next/head";
 import { useState } from "react";
 import { Modal, Selectors } from "../components";
 import { Book, Dropdown, Adult, Car } from "../public/index";
+import { useSelector } from 'react-redux';
 
 type Pages = {
   heading: string,
@@ -43,7 +44,9 @@ const Arr: Pages[] = [
   }
 ]
 const Home: NextPage = () => {
+  const country = useSelector((state:any) => state.country.state);
   const [display, setDisplay] = useState<boolean>(true);
+  console.log(country);
   const isPopUp = () => {
     setDisplay(!display);
   }
