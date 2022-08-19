@@ -1,5 +1,6 @@
 import React, { FC, PropsWithChildren, useId, useState } from "react";
 import Link from "next/link";
+import SelectorItem from "./SelectorDropdown";
 
 export type Pages = {
   heading: string;
@@ -12,9 +13,7 @@ const Selectors = ({ pages }: any) => {
   const Id = useId();
   return (
     <div className="grid gap-8 lg:gap-24 grid-cols-1 lg:grid-cols-3 mt-8">
-      {newArr.map(({ heading, value, icon }: Pages, i: number) => {
-        
-      })}
+      {newArr.map(({ heading, value, icon }: Pages, i: number) => <SelectorItem heading={heading} value={value} icon={icon} i={i} />)}
     </div>
   );
 };
