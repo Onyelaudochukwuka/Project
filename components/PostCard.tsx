@@ -1,10 +1,10 @@
 import { StaticImageData } from "next/image";
 import React, { FC } from 'react';
 
-interface PostCardProps {
+export interface PostCardProps {
   userName: string;
   timeOfPost: number;
-  image: string;
+  image: StaticImageData;
   details: string;
   
 }
