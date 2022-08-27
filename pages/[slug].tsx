@@ -10,17 +10,17 @@ const Slug: NextPage = () => {
   const Id = useId();
   const Data: { [k: string]: PostCardProps[] } = {
     Escort: [{
-      userName: "string",
+      userName: "UserName",
       timeOfPost: 1661623241597,
       image: image,
       details: "i am a detail",
     }, {
-      userName: "string",
+      userName: "Naruto",
       timeOfPost: 1661623241597,
       image: image,
       details: "i am a detail",
     }, {
-      userName: "string",
+      userName: "Shiro",
       timeOfPost: 1661623241597,
       image: image,
       details: "i am a detail",
