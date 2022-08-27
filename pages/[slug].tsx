@@ -6,7 +6,7 @@ import { PostCardProps } from "../components/PostCard";
 const Slug: NextPage = () => {
   const params = useRouter();
   const { slug } = params.query;
-  const [slugAds, setSlugAds] = useState();
+  const [slugAds, setSlugAds] = useState<PostCardProps[]>();
   console.log(image)
   const Data: { [k: string]: PostCardProps[] } = {
     
@@ -56,7 +56,7 @@ const Slug: NextPage = () => {
   useEffect(() => {
     let data:string = typeof slug === "string" ? slug : "data";
     if (!!Data[data]) {
-      setSlugAds(Data[slug])
+      setSlugAds(Data[data])
     }
     console.log(slugAds)
   }, [])
