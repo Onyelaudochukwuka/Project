@@ -63,9 +63,12 @@ const Slug: NextPage = () => {
   }, [slug])
 
   return (
-    <div>
+    <div className="mt-20">
       {
-        !!slugAds ? slugAds.map((val, i) => <PostCard key={Id + i} {...val} />)
+        !!slugAds ?
+          <div className="grid lg:grid-cols-3 grid-cols-1 gap-4">
+          {slugAds.map((val, i) => <PostCard key={Id + i} {...val} />)}
+          </div>
           :
           <p>No ads Available on this session</p>
       }
