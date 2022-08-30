@@ -46,7 +46,6 @@ const Arr: Pages[] = [
 const Home: NextPage = () => {
   const country = useSelector((state:any) => state.country.state);
   const [display, setDisplay] = useState<boolean>(true);
-  console.log(country);
   const isPopUp = () => {
     setDisplay(!display);
   }
