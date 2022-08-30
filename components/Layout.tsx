@@ -11,9 +11,11 @@ const Layout = ({ children }: PropsWithChildren<any>) => {
               <title>Ero</title>
           </Head> 
           
-      <div className="bg-[#053F5C] w-screen overflow-x-hidden min-h-screen">
+      <div className="bg-[#053F5C] w-screen grid GRID overflow-x-hidden min-h-screen gridStuff">
           <Navbar />
+          <section className="body">
           {children}
+          </section>
           <Footer />
      </div>
     </>

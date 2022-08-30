@@ -3,7 +3,8 @@ import Head from "next/head";
 import { useState } from "react";
 import { Modal, Selectors } from "../components";
 import { Book, Dropdown, Adult, Car } from "../public/index";
-import isPopUp, { display } from "../utils/hooks/isPopUp";
+import { useSelector } from 'react-redux';
+
 type Pages = {
   heading: string,
   value: string[],
@@ -43,14 +44,18 @@ const Arr: Pages[] = [
   }
 ]
 const Home: NextPage = () => {
-  const [display, setDisplay] = useState<boolean>(false);
+  const country = useSelector((state:any) => state.country.state);
+  const [display, setDisplay] = useState<boolean>(true);
   const isPopUp = () => {
     setDisplay(!display);
   }
   return (
     <div className="w-full mt-12 flex flex-col items-center justify-center h-full">
       <Selectors pages={Arr} />
-      <Modal />
+      {
+        display &&
+        <Modal close={isPopUp} />
+      }
     </div>
   );
 };

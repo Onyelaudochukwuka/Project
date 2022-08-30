@@ -3,7 +3,7 @@ import React, { FC } from 'react'
 
 const Footer:FC = () => {
   return (
-      <div>
+      <div className="footer">
           <Link href={"/login"}>login</Link>
     </div>
   )
