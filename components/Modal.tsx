@@ -16,7 +16,10 @@ const Modal: FC<{ close: () => void }> = ({ close }) => {
           <option value={""}>select a state</option>
           {["ottawa", "toronto", "quebec"].map((val, i) => <option key={Id + i} value={val}>{val}</option>)}
               </select>    
-        <button onClick={() => dispatch(selectCountry({ state: !!state.current ? state.current : ""}))} className="px-8 py-3 bg-dark text-light font-bold rounded-full">Continue</button>
+              <button onClick={() => {
+                  close();
+                  dispatch(selectCountry({ state: !!state.current ? state.current : "" }));
+              }} className="px-8 py-3 bg-dark text-light font-bold rounded-full">Continue</button>
           </div>
       </section>
   )
