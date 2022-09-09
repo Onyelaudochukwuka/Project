@@ -40,7 +40,7 @@ const PostCard: FC<PostCardProps> = ({ userName, timeOfPost, image, details }) =
         </div>
 
       </div>
-      <p className="pl-6 w-fit  mx-auto font-semibold">{details}</p>
+      <p className="pl-6 w-fit  mx-auto">{details}</p>
     </div>
   );
 };
