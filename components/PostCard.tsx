@@ -28,7 +28,7 @@ const PostCard: FC<PostCardProps> = ({ userName, timeOfPost, image, details }) =
         </div>
         <div>
           <div
-            onClick={() => setState(prev => !prev)} className={`relative w-2 h-2 rounded-full after:w-2 after:h-2 after:right-3 after:absolute after:rounded-full before:w-2 before:h-2 before:rounded-full before:bg-light before:right-6 before:absolute bg-light after:bg-light`}></div>       
+            onClick={() => setState(prev => !prev)} className={`relative w-2 h-2 rounded-full after:w-2 after:h-2 after:right-3 after:absolute after:rounded-full before:w-2 before:h-2 before:rounded-full before:bg-light before:right-6 before:absolute bg-light after:bg-light cursor-pointer after:cursor-pointer before:cursor-pointer`}></div>       
             <div className={`absolute mt-4 right-0 bg-light text-dark py-4 rounded-xl ${!state ? `scale-y-0` : `scale-y-100`} transition-transform origin-center z-10`}>
             <p className="px-8 py-2 cursor-pointer flex gap-2 items-center"><Disturb/> Not Interested</p>
             <p className="border-t-4 px-8 py-2 cursor-pointer flex gap-2 items-center"><Share /> Share</p>
