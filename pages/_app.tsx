@@ -6,8 +6,8 @@ import  store  from "../utils/services/store";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
-    <Layout>
-      <Component {...pageProps} />
+      <Layout>
+          <Component {...pageProps} />
       </Layout>
     </Provider>
   )
