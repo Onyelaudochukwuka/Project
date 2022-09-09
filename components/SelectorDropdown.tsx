@@ -1,12 +1,12 @@
 import React, { useState, FC, useId, useLayoutEffect } from 'react';
 import type { Pages } from "./Selectors";
 import { Dropdown } from "../public/icons";
-import SelectorDropItem from "./SelectorDropItem";
+import { motion } from "framer-motion";
+import Link from "next/link";
 const SelectorDropdown: FC<Pages & { i:number }> = ({ heading, value, icon,i }) => {
   const [drop, setDrop] = useState<boolean>(false);
 
     const Id = useId();
-   
   return (
         <div className="transition-[height] duration-300 ease-in">
             <div
@@ -20,7 +20,21 @@ const SelectorDropdown: FC<Pages & { i:number }> = ({ heading, value, icon,i }) 
                 </span>
             </div>
 
-          <SelectorDropItem value={value} drop={drop} />
+      <motion.div
+        initial={{
+          height: 0
+        }}
+        animate={{
+          height: drop ? "auto" : 0
+        }}
+        transition={{ delay: 0, type: "just" }}
+        className={`flex flex-col gap-2 font-bold text-lg text-[#D0F7FF] pt-4 overflow-y-hidden`}>
+        {value.map((option) => (
+          <Link href={option} key={Id + option}>
+            {option}
+          </Link>
+        ))}
+      </motion.div>
         </div>
   )
 }
