@@ -73,11 +73,15 @@ const UserData = () => {
           nisi ullam magni sapiente minus sequi, illum eius. Sunt at sit omnis.
         </p>
       </div>
+      <div className="border-b-2 border-light pt-16 pb-4">
+        <p className="text-light">Related post</p>
+      </div>
       <div className="grid md:grid-cols-3  lg:grid-cols-4 gap-4 ">
           {data.map((items) => (
             <OtherUser {...items} />
           ))}
         </div>
+      
      
     </div>
 
