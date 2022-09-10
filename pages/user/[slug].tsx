@@ -36,8 +36,8 @@ const user = ({slug}:{slug:string}) => {
     ];
 
     return (
-        <div className="mx-auto px-10 lg:mx-[7rem] my-20 w-full ">
-            <div className="flex gap-4  text-light items-center">
+        <div className=" px-10 my-20 w-full ">
+            <div className="flex gap-4  text-neutral items-center">
                 <span className="block h-12 w-12 rounded-full">
                     <Image src={pic} className="rounded-full" layout="responsive" />
                 </span>
@@ -64,7 +64,7 @@ const user = ({slug}:{slug:string}) => {
                 </Swiper>
             </div>
             <div>
-                <p className="text-light pt-4 w-3/4 mx-auto">
+                <p className="text-neutral pt-4 w-3/4">
                     {/* 😍😍HELLO I AM A SEXY HOT AND BEAUTIFUL GIRL WRITE ME 100% GUARANTEED
           SERVICE💑💑 BBJ💦💦💦😋😋 KISS😘😘 MASSAGE AND GFE 😍😍😍💆♂💆♂
           👉👌😋😋💦💦💦if you are stressed or very tired come love and relax
@@ -74,8 +74,8 @@ const user = ({slug}:{slug:string}) => {
                     nisi ullam magni sapiente minus sequi, illum eius. Sunt at sit omnis.
                 </p>
             </div>
-            <div className="border-b-2 border-light pt-16 mb-4">
-                <p className="text-light">Related post</p>
+            <div className="border-b-2 border-neutral pt-16 mb-4">
+                <p className="text-neutral">Related post</p>
             </div>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-around gap-12">
                 {data.map(({ id, ...items }) => (<OtherUser {...items} key={id} />))}
