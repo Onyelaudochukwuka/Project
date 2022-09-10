@@ -81,8 +81,8 @@ const UserData = () => {
         <p className="text-light">Related post</p>
       </div>
       <div className="grid md:grid-cols-3  lg:grid-cols-3 gap-4 ">
-          {data.map((items) => (
-            <OtherUser {...items} />
+          {data.map(({id ,...items}) => (
+            <OtherUser {...items} key={id} />
           ))}
         </div>
       
