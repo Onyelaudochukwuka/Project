@@ -9,7 +9,7 @@ import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import { OtherUser } from "../../components";
 
-const user = ({slug}) => {
+const user = ({slug}:{slug:string}) => {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
     const data = [
         {
