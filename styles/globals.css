@@ -4,14 +4,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 html{
     font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
 }
 .gridStuff{
     display: grid;
     grid-template-areas: "nav body body"
                          "nav body body"
                          "foot foot foot";
-    grid-template-columns: repeat(auto, 3);
-    grid-template-rows: repeat(auto, 3);
+    grid-template-columns: repeat(1fr, 3);
+    grid-template-rows: repeat(1fr, 3);
+    column-gap: 20px;
 }
 nav{
     grid-area: nav;
