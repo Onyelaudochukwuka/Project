@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.gridStuff{
+    display: grid;
+    grid-template-areas: "nav body body"
+                         "nav body body"
+                         "nav foot foot";
+    grid-template-columns: repeat(auto, 3);
+    grid-template-rows: repeat(auto, 3);
+}
+.navbar{
+    grid-area: nav;
+    width: 0;
+}
+.body{
+    grid-area: body;
+}
+.footer{
+    grid-area: foot;
+}
