@@ -52,10 +52,8 @@ const Home: NextPage = () => {
   return (
     <div className="w-full mt-12 flex flex-col items-center justify-center h-full">
       <Selectors pages={Arr} />
-      {
-        display &&
-        <Modal close={isPopUp} />
-      }
+            <Modal close={isPopUp} display={display} />
+
     </div>
   );
 };
