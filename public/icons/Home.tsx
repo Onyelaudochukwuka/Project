@@ -3,7 +3,7 @@ import React, { FC } from 'react'
 const Home: FC<{ className: string }> = (props) => {
   return (
       <svg {...props} width="30px" height="30px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-          viewBox="0 0 26.39 26.39"   fill="#429EBD">
+          viewBox="0 0 26.39 26.39" fill="#043943">
           <g>
               <g id="c14_house">
                   <path d="M3.588,24.297c0,0-0.024,0.59,0.553,0.59c0.718,0,6.652-0.008,6.652-0.008l0.01-5.451c0,0-0.094-0.898,0.777-0.898h2.761
