@@ -64,7 +64,8 @@ const Slug: NextPage = () => {
     <div className="mt-20">
       {
         !!slugAds ?
-          <div className="grid lg:grid-cols-3 grid-cols-1 gap-4">
+          <div className="flex flex-col w-full">
+            
           {slugAds.map((val, i) => <PostCard key={Id + i} {...val} />)}
           </div>
           :
