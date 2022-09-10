@@ -1,5 +1,6 @@
 import moment from "moment";
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 import React, { FC, useState } from 'react';
 import Disturb from "../public/icons/Disturb";
 import Share from "../public/icons/Share";
@@ -18,9 +19,11 @@ const PostCard: FC<PostCardProps> = ({ userName, timeOfPost, image, details }) =
     <div className="text-light w-full relative bg-medium p-6 rounded-xl shadow-lg shadow-light/10 -ml-10">
       <div className="flex items-center justify-between">
       <div className="flex items-center gap-6">
-        <span className="block w-8 h-8 rounded-full">
+        <Link href={`user/${userName}`}>
+        <span className="block w-8 h-8 rounded-full cursor-pointer">
           <Image src={image} className="rounded-full" layout="responsive" />
         </span>
+        </Link>
         <span>
           <p>{userName}</p>
           <p>{moment(timeOfPost).fromNow()}</p>
@@ -37,7 +40,7 @@ const PostCard: FC<PostCardProps> = ({ userName, timeOfPost, image, details }) =
         </div>
 
       </div>
-      <p className="pl-6 w-fit  mx-auto font-semibold">{details}</p>
+      <p className="pl-6 w-fit  mx-auto">{details}</p>
     </div>
   );
 };
