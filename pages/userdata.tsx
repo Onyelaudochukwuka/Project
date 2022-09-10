@@ -16,18 +16,22 @@ const UserData = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const data = [
     {
+      id: 1,
       img: require("../public/section1.jpg"),
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea fugiattemporibus atque cupiditate",
     },
     {
+      id: 2,
       img: require("../public/section1.jpg"),
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea fugiattemporibus atque cupiditate",
     },
     {
+      id: 3,
       img: require("../public/section1.jpg"),
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea fugiattemporibus atque cupiditate",
     },
     {
+      id: 4,
       img: require("../public/section1.jpg"),
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea fugiattemporibus atque cupiditate",
     },
@@ -73,10 +77,10 @@ const UserData = () => {
           nisi ullam magni sapiente minus sequi, illum eius. Sunt at sit omnis.
         </p>
       </div>
-      <div className="border-b-2 border-light pt-16 pb-4">
+      <div className="border-b-2 border-light pt-16 mb-4">
         <p className="text-light">Related post</p>
       </div>
-      <div className="grid md:grid-cols-3  lg:grid-cols-4 gap-4 ">
+      <div className="grid md:grid-cols-3  lg:grid-cols-3 gap-4 ">
           {data.map((items) => (
             <OtherUser {...items} />
           ))}
