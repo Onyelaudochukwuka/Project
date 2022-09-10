@@ -16,14 +16,13 @@ export interface PostCardProps {
 const PostCard: FC<PostCardProps> = ({ userName, timeOfPost, image, details }) => {
   const [state, setState] = useState(false);
   return (
-    <div className="text-light w-full relative bg-medium p-6 rounded-xl shadow-lg shadow-light/10 -ml-10">
+        <Link href={`user/${userName}`}>
+      <div className="text-light  cursor-pointer w-full relative bg-medium p-6 rounded-xl shadow-lg shadow-light/10 -ml-10">
       <div className="flex items-center justify-between">
       <div className="flex items-center gap-6">
-        <Link href={`user/${userName}`}>
-        <span className="block w-8 h-8 rounded-full cursor-pointer">
+        <span className="block w-8 h-8 rounded-full">
           <Image src={image} className="rounded-full" layout="responsive" />
         </span>
-        </Link>
         <span>
           <p>{userName}</p>
           <p>{moment(timeOfPost).fromNow()}</p>
@@ -42,6 +41,7 @@ const PostCard: FC<PostCardProps> = ({ userName, timeOfPost, image, details }) =
       </div>
       <p className="pl-6 w-fit  mx-auto">{details}</p>
     </div>
+        </Link>
   );
 };
 
