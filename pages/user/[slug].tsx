@@ -77,7 +77,7 @@ const user = () => {
             <div className="border-b-2 border-light pt-16 mb-4">
                 <p className="text-light">Related post</p>
             </div>
-            <div className="grid grid-cols-3 justify-around gap-12">
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-around gap-12">
                 {data.map(({ id, ...items }) => (<OtherUser {...items} key={id} />))}
             </div>
 
