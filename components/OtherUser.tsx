@@ -1,11 +1,12 @@
-import React from 'react'
+import Image, { StaticImageData } from "next/image"
+import React, { FC } from 'react'
 
-const OtherUser = (id, img, text) => {
+const OtherUser:FC<{img: StaticImageData, text: string}> = ({ img, text}) => {
   return (
     <>
-        <div className='w-60 flex flex-col gap-2 bg-neutralDark h-60 ' key={id}>
-            <div>
-                <img src={img} alt="" className='w-full' />
+        <div className='w-9/12 flex flex-col gap-2 basis-1/3'>
+        <div className='w-full' >
+                <Image src={img} alt="" layout="responsive"/>
             </div>
             <div>
                 <p className='text-light'>{text}</p>
