@@ -1,26 +1,48 @@
 import React, { useState, useRef } from "react";
 import Image from "next/image";
 import pic from "../../public/images.png";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
-import { NextPage } from "next";
-const user = ({ slug }: { slug: string }) => {
+import { OtherUser } from "../../components";
+
+const user = () => {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
+    const data = [
+        {
+            id: 1,
+            img: require("../../public/section1.jpg"),
+            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea fugiattemporibus atque cupiditate",
+        },
+        {
+            id: 2,
+            img: require("../../public/section1.jpg"),
+            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea fugiattemporibus atque cupiditate",
+        },
+        {
+            id: 3,
+            img: require("../../public/section1.jpg"),
+            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea fugiattemporibus atque cupiditate",
+        },
+        {
+            id: 4,
+            img: require("../../public/section1.jpg"),
+            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea fugiattemporibus atque cupiditate",
+        },
+
+    ];
 
     return (
-
-        <div className="mx-auto px-10 my-20 w-full">
+        <div className="mx-auto px-10 lg:mx-[7rem] my-20 w-full ">
             <div className="flex gap-4 text-light items-center">
                 <span className="block w-10 h-10 rounded-full">
                     <Image src={pic} className="rounded-full" layout="responsive" />
                 </span>
                 <span>
-                    <p>{slug}</p>
+                    <p>Marvin McKinney</p>
                     <p>(316) 555-0116</p>
                 </span>
             </div>
@@ -28,14 +50,15 @@ const user = ({ slug }: { slug: string }) => {
                 <Swiper
                     pagination={true}
                     modules={[Pagination]}
-                    className="w-56 mx-auto"
+                    className="w-1/4 h-auto mx-auto"
                 >
                     <SwiperSlide className="swiperSlide h-full">
                         <img src={"/section1.jpg"} />
                     </SwiperSlide>
                     <SwiperSlide className="swiperSlide h-full">
                         <img src={"/section2.jpg"} />
-                    </SwiperSlide><SwiperSlide className="swiperSlide h-full">
+                    </SwiperSlide>
+                    <SwiperSlide className="swiperSlide h-full">
                         <img src={"/section1.jpg"} />
                     </SwiperSlide>
                 </Swiper>
@@ -46,12 +69,24 @@ const user = ({ slug }: { slug: string }) => {
           SERVICE💑💑 BBJ💦💦💦😋😋 KISS😘😘 MASSAGE AND GFE 😍😍😍💆♂💆♂
           👉👌😋😋💦💦💦if you are stressed or very tired come love and relax
           with me 🤤🥰 🍑 */}
-                    BLaldkdbfdjbfjfbfffjdfvdsv hvfjdjhjchvcvhjvj j vvadvjjcdvva  jcajvkhajchv
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea fugiat
+                    temporibus atque cupiditate, suscipit laboriosam et aliquam molestias
+                    nisi ullam magni sapiente minus sequi, illum eius. Sunt at sit omnis.
                 </p>
             </div>
+            <div className="border-b-2 border-light pt-16 mb-4">
+                <p className="text-light">Related post</p>
+            </div>
+            <div className="grid grid-cols-3 justify-around gap-12">
+                {data.map(({ id, ...items }) => (<OtherUser {...items} key={id} />))}
+            </div>
+
+
         </div>
+
     );
 };
+
 
 user.getInitialProps = async ({ query }: any) => {
     const { slug } = query;
