@@ -13,7 +13,7 @@ const Layout = ({ children }: PropsWithChildren<any>) => {
           
       <div className="bg-[#053F5C] w-screen grid GRID overflow-x-hidden min-h-screen gridStuff">
           <Navbar />
-          <section className="body">
+          <section className="body min-h-screen">
           {children}
           </section>
           <Footer />
