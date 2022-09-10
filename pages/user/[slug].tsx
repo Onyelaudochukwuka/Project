@@ -9,7 +9,7 @@ import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import { OtherUser } from "../../components";
 
-const user = () => {
+const user = ({slug}) => {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
     const data = [
         {
@@ -42,7 +42,7 @@ const user = () => {
                     <Image src={pic} className="rounded-full" layout="responsive" />
                 </span>
                 <span>
-                    <p>Marvin McKinney</p>
+                    <p>{ slug }</p>
                     <p>(316) 555-0116</p>
                 </span>
             </div>
