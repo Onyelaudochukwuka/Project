@@ -11,9 +11,9 @@ html{
     grid-template-areas: "nav body body"
                          "nav body body"
                          "foot foot foot";
-    grid-template-columns: repeat(1fr, 3);
+    grid-template-columns: 0.9fr 2fr  2fr;
     grid-template-rows: repeat(1fr, 3);
-    column-gap: 20px;
+    /* column-gap: 20px; */
 }
 nav{
     grid-area: nav;
