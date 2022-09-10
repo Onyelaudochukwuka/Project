@@ -52,11 +52,9 @@ const Slug: NextPage = () => {
       details: "i am a detail",
     }]
   }
-  console.log(Date.now())
 
   useEffect(() => {
     let data: string = typeof slug === "string" ? slug : "data";
-    console.log(data)
     if (!!Data[data]) {
       setSlugAds(Data[data])
     }
