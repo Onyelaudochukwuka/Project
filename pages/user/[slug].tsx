@@ -37,8 +37,8 @@ const user = () => {
 
     return (
         <div className="mx-auto px-10 lg:mx-[7rem] my-20 w-full ">
-            <div className="flex gap-4 text-light items-center">
-                <span className="block w-10 h-10 rounded-full">
+            <div className="flex gap-4  text-light items-center">
+                <span className="block h-12 w-12 rounded-full">
                     <Image src={pic} className="rounded-full" layout="responsive" />
                 </span>
                 <span>
