@@ -4,7 +4,6 @@ import { addCount, removeCount } from "../utils/services/reducers/reducers";
 const ads:FC = () => {
   let count = useSelector((state: any) => state?.counter?.value);
   let dispatch = useDispatch()
-  console.log(count);
   
   return (
     <div>
