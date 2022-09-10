@@ -26,7 +26,7 @@ const Navbar: FC = () => {
   }, []);
   return (
     <nav>
-      <aside className={`${`${isDesktop ? `w-24 group  left-0 hover:w-56` : ` ${!isMobile ? `absolute w-0 -left-full` : `relative w-24 left-0`} `}`} cursor-pointer transition-all duration-300 ease-in overflow-x-hidden  h-full  left-0 top-0 bottom-0 z-10 flex bg-[#429EBD] justify-center gap-24 flex-col  w-full items-center content-center`}>
+      <aside className={`${`${isDesktop ? `w-24 group fixed  left-0 hover:w-56` : `fixed ${!isMobile ? `w-0 -left-full` : `w-24 inset-y-0 left-0`} `}`} cursor-pointer transition-all duration-300 ease-in overflow-x-hidden  h-full  left-0 top-0 bottom-0 z-10 flex bg-[#429EBD] justify-center gap-24 flex-col  w-full items-center content-center`}>
           <Link href="/" className="mx-auto">
             <div className={`cursor-pointer ${isDesktop ? `gap-4 group-hover:flex` : `block`} `} onClick={() => setIsMobile (false)}>
               <span className="bg-[#9FE7F5] w-12 h-12 rounded-full flex items-center justify-center">
